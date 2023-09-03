@@ -1,0 +1,24 @@
+ALGORITHM task1
+VAR
+    words , vowles , i : INTEGER ; 
+    ch : STRING [100] ;
+    
+BEGIN
+    words := 1 ; 
+    vowles := 0 ; 
+
+    REPEAT
+        write('enter a sentence ending with a point :');
+        read(ch);
+    UNTIL (ch[lenght(ch)-1]=='.')
+    FOR i FROM 0 TO ch.lenght-1 STEP 1  DO
+        IF (ch[i] in ['a', 'e','i','o','u','y']) THEN
+            vowles=vowles+1 ;
+        ELSE_IF (ch[i] =' ') THEN  
+            words=words+1 ;
+        END_IF
+    END_FOR
+
+    write('number of words in the sentence :'words);
+    write('number of vowles in the sentence:' vowles); 
+END
